@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="GOLF-17">
+  <title>ゴルフユニフォーム｜横スクロールタイプ</title>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/css.css">
+  <script src="JavaSprict/Thumbnails.js"></script>
+  <script src="JavaSprict/Product_image.js"></script>
+  <script src="JavaSprict/swiper-bundle.min.js"></script>
+  <script src="JavaSprict/name.js"></script>
+  <script src="JavaSprict/JavaScript.js"></script>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon.ico">
+</head>
+
+<body onload="open()">
+
+  <main id="main2">
+
+    <div id="home_check"  class="flex_display">
+      <div id="home_check2">
+        <div class="home_check_image"><img src="icon/manual02.png"></div>
+        <div class="home_check_icon"><img src="icon/ch.svg"></div>
+        <div class="home_check_image"><img src="icon/manual03.png"></div>
+      </div>
+      
+      <h2>ブラウザより起動されています。<br>「ホーム画面に追加」を行ってから、<br>ホーム画面より起動してください。</h2>
+    </div>
+
+    <div id="loading" class="flex_display">
+      <h2 id="loading2">キャッシュ保存中です。</h2>
+      <h2 id="loading3" class="non_display">キャッシュに失敗しました。再起動してください。</h2>
+    </div>
+
+    <img id="backgraund_image" class="blur">
+
+    <div id="main_box">
+
+      <div id="image_box">
+
+        <img id="main_image_mannequin" class="feedin image_width" src="images/non_image.png">
+        <img id="main_image_top" class="feedin image_width" src="images/non_image.png">
+        <img id="main_image_bottom" class="feedin image_width" src="images/non_image.png">
+
+        <img src="icon/backgraund.svg" onclick="backgraund_change()" id="backgraund_button"
+          class="effect-target hidden-print">
+        <!-- <img src="icon/rotate.png" onclick="rotate()" id="rotate" class="effect-target hidden-print"> -->
+
+      </div>
+
+      <div id="event">
+        <div id="delete_event" onclick="delete_event()"></div>
+        <div id="top_event" onclick="top_event()"></div>
+        <div id="bottom_event" onclick="bottom_event()"></div>
+      </div>
+
+      <div id="select_box">
+
+        <div id="select_box2" class="hidden balloon1-left select_box">
+          <div id="top_pattern_select_box_01" class="">
+            <div class="swiper-container gallery-thumbs" id="top_pattern_select_box_02">
+              <div class="swiper-wrapper" id="top_pattern_select_box_03">
+                <div class="swiper-slide"></div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="line"></div>
+
+          <div id="top_color_select_box_01">
+            <div class="swiper-container gallery-thumbs" id="top_color_select_box_02">
+              <div class="swiper-wrapper" id="top_color_select_box_03">
+                <!-- <div class="swiper-slide"></div> -->
+              </div>
+              <!-- <div class="swiper-scrollbar"></div> -->
+              <!-- <div class="swiper-button-next"></div> -->
+              <!-- <div class="swiper-button-prev"></div> -->
+            </div>
+          </div>
+        </div>
+
+        <div id="select_box3" class="hidden select_box balloon1-left">
+          <div id="bottom_pattern_select_box_01" class="">
+            <div class="swiper-container gallery-thumbs" id="bottom_pattern_select_box_02">
+              <div class="swiper-wrapper" id="bottom_pattern_select_box_03">
+                <!-- <div class="swiper-slide"></div> -->
+              </div>
+              <!-- <div class="swiper-scrollbar"></div> -->
+              <!-- <div class="swiper-button-next"></div> -->
+              <!-- <div class="swiper-button-prev"></div> -->
+            </div>
+          </div>
+
+          <div class="line"></div>
+
+          <div id="bottom_color_select_box_01">
+            <div class="swiper-container gallery-thumbs" id="bottom_color_select_box_02">
+              <div class="swiper-wrapper" id="bottom_color_select_box_03">
+                <!-- <div class="swiper-slide"></div> -->
+              </div>
+              <!-- <div class="swiper-scrollbar"></div> -->
+              <!-- <div class="swiper-button-next"></div> -->
+              <!-- <div class="swiper-button-prev"></div> -->
+            </div>
+          </div>
+        </div>
+
+        <div id="top_customize01_select_box_01" class="balloon1-right select_box hidden">
+          <div class="swiper-container gallery-thumbs" id="top_customize01_select_box_02">
+            <div class="swiper-wrapper" id="top_customize01_select_box_03">
+              <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <dic id="table00">
+
+        <!-- <input type="text" id="comment" class="hidden" placeholder="（任意）キーワード" size="10" maxlength="10"> -->
+
+        <img id="non_image" src="images/non_image.png">
+
+        <div id="table_left">
+          <div id="table01" class="hidden">
+            <div class="checkbox hidden-print" id="top_checked_div">
+              <input type="checkbox" id="checked01" checked onchange="checked01()">
+              <h2>トップス</h2>
+            </div>
+
+            <table id="top_checked_table">
+              <tr>
+                <th>型名</th>
+              </tr>
+              <tr>
+                <td id="product_top"></td>
+              </tr>
+              <tr>
+                <th>柄名</th>
+              </tr>
+              <tr>
+                <td id="type_name_top">
+                  </th>
+              </tr>
+              <tr>
+                <th>色</th>
+              </tr>
+              <tr>
+                <td id="color_name_top"></td>
+              </tr>
+              <tr>
+                <th>サイズ</th>
+              </tr>
+              <tr>
+                <td>
+                  <select id="size_top">
+                    <option hidden class="select_hidden">選択してください</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">LL</option>
+                    <option value="">3L</option>
+                    <option value="">4L</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>金額</th>
+              </tr>
+              <tr>
+                <td id="amount_top"></td>
+              </tr>
+            </table>
+
+            <div class="checkbox hidden-print" id="bottom_checked_div">
+              <input type="checkbox" id="checked02" checked onchange="checked01()">
+              <h2>ボトムス</h2>
+            </div>
+
+            <table id="bottom_checked_table">
+              <tr>
+                <th>型名</th>
+              </tr>
+              <tr>
+                <td id="product_bottom"></td>
+              </tr>
+              <tr>
+                <th>柄名</th>
+              </tr>
+              <tr>
+                <td id="type_name_bottom"></td>
+              </tr>
+              <tr>
+                <th>色</th>
+              </tr>
+              <tr>
+                <td id="color_name_bottom"></td>
+              </tr>
+              <tr>
+                <th>サイズ</th>
+              </tr>
+              <tr>
+                <td>
+                  <select id="size_botton">
+                    <option hidden class="select_hidden">選択してください</option>
+                    <option value="">73</option>
+                    <option value="">76</option>
+                    <option value="">79</option>
+                    <option value="">82</option>
+                    <option value="">85</option>
+                    <option value="">88</option>
+                    <option value="">92</option>
+                    <option value="">96</option>
+                    <option value="">100</option>
+                    <option value="">105</option>
+                    <option value="">110</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>金額</th>
+              </tr>
+              <tr>
+                <td id="amount_bottom"></td>
+              </tr>
+            </table>
+
+            <table id="total_price">
+              <tr>
+                <th>合計金額</th>
+              </tr>
+              <tr>
+                <td id="amount_all"></td>
+              </tr>
+            </table>
+
+
+          </div>
+
+          <div id="order">
+            <button id="order_back" type="button" class="hidden-print hidden" onclick="order_back()">戻る</button>
+            <button id="order_button" type="button" onclick="order()" class="effect-target hidden-print">
+              <img id="cart" src="icon/cart.svg">
+              <p id="order_text"></p>
+            </button>
+          </div>
+
+        </div>
+      </dic>
+
+    </div>
+
+    <div id="tutorial" onclick="tutorial()">
+      <div id="top_tutorial">
+        <h2>タッチしてスタート</h2>
+        <h4>ユニフォームカスタマイズ</h4>
+      </div>
+    </div>
+
+
+  </main>
+
+  <script>
+    var is_standalone;
+    switch (true) {
+      // manifest.jsonのstart_urlと比較する もしくは iOSの場合
+      case (-1 != location.href.indexOf("?utm_source=homescreen")):
+      case navigator.standalone:
+        is_standalone = true;
+        break;
+      default:
+        is_standalone = false;
+    }
+
+    // is_standalone = true;
+    // load_finish();
+
+    if (is_standalone) {
+      var ele = document.getElementById("home_check");
+      ele.remove();
+
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistration().then(function (registration) {
+          // 登録中の SW がなければ、これが初回登録である
+          const firstRegistration = (registration === undefined);
+          if (firstRegistration) {
+            navigator.serviceWorker.register('sw.js').then(function (registration) {
+              registration.addEventListener('updatefound', () => {
+                const installingWorker = registration.installing;
+                if (installingWorker != null) {
+                  installingWorker.onstatechange = e => {
+                    switch (e.target.state) {
+                      case 'installed':
+                        console.log("インストール完了");
+                        break;
+                      case 'activating':
+                        console.log("動作開始");
+                        break;
+                      case 'activated':
+                        console.log("動作完了");
+                        load_finish();
+                        return;
+                      default:
+                        load_out();
+                        console.log("キャッシュ失敗");
+                    }
+                  }
+                }
+              });
+            })
+          } else {
+            load_finish();
+            console.log("インストール済み");
+          }
+        });
+      }
+    }
+
+    // if ('serviceWorker' in navigator) {
+    //   navigator.serviceWorker.getRegistration().then(function (registration) {
+    //     // 登録中の SW がなければ、これが初回登録である
+    //     const firstRegistration = (registration === undefined);
+    //     if (firstRegistration) {
+    //       navigator.serviceWorker.register('sw.js').then(function (registration) {
+    //         registration.addEventListener('updatefound', () => {
+    //           const installingWorker = registration.installing;
+    //           if (installingWorker != null) {
+    //             installingWorker.onstatechange = e1 => {
+    //               console.log(e1.target.state);
+    //               if (e1.target.state == 'installed') {
+    //                 installingWorker.onstatechange = e2 => {
+    //                   console.log(e2.target.state);
+    //                   if (e2.target.state == 'activating') {
+    //                     installingWorker.onstatechange = e3 => {
+    //                       console.log(e3.target.state);
+    //                       if (e3.target.state == 'activated') {
+    //                         load_finish();
+    //                         console.log("動作確認01");
+    //                       } else {
+    //                         load_out();
+    //                         console.log("動作確認02");
+    //                       }
+    //                     }
+    //                   } else {
+    //                     load_out();
+    //                     console.log("動作確認03");
+    //                   }
+    //                 }
+    //               } else {
+    //                 load_out();
+    //                 console.log("動作確認04");
+    //               }
+    //             };
+    //           }
+    //         });
+    //       })
+    //       console.log("動作確認");
+    //     } else {
+    //       load_finish();
+    //     }
+    //   });
+    //   console.log("動作確認");
+    // }
+  </script>
+
+</body>
+
+</html>
